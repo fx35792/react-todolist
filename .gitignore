@@ -5,3 +5,4 @@ dist
 npm-debug.log
 mock
 .DS_Store
+package-lock.json
