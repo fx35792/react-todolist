@@ -28,13 +28,9 @@ class TodoItem extends Component {
     render() {
         const {content} = this.props;
         return (
-            <div onClick={this.handleDelete.bind(this)}>{content}</div>
+            <div onClick={this.handleDelete}>{content}</div>
         )
     };
-
-    componentWillReceiveProps() {
-        console.log('componentWillReceiveProps');
-    }
 }
 
 TodoItem.propTypes = {
