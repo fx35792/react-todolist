@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
 
@@ -10,8 +11,18 @@ class TodoItem extends Component {
         this.handleDelete = this.handleDelete.bind(this);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        const {content} = this.props;
+        if (nextProps.content !== content) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     handleDelete = () => {
-        this.props.delete(this.props.index)
+        const {deleteItem, index} = this.props;
+        deleteItem(index)
     };
 
     render() {
@@ -19,7 +30,16 @@ class TodoItem extends Component {
         return (
             <div onClick={this.handleDelete.bind(this)}>{content}</div>
         )
+    };
+
+    componentWillReceiveProps() {
+        console.log('componentWillReceiveProps');
     }
 }
 
+TodoItem.propTypes = {
+    content: PropTypes.string,
+    index: PropTypes.number,
+    deleteItem: PropTypes.func,
+};
 export default TodoItem;
