@@ -82,7 +82,7 @@ class TodoList extends Component {
                 </fieldset>
                 <fieldset>
                     <legend>动画效果演示</legend>
-                    <p className={fontVisible ? 'show' : 'hide'}>hello</p>
+                    <p className={fontVisible ? 'showAnimate' : 'hideAnimate'}>hello</p>
                     <button onClick={this.handleChangeVisible}>toggle</button>
                 </fieldset>
 

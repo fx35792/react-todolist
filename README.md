@@ -32,7 +32,9 @@ constructor(props){
     //当props发生变化的时候会触发  
     11.componentWillReceiveProps(nextProps,nextState)  
     ![生命周期图片](https://images2015.cnblogs.com/blog/588767/201612/588767-20161205190022429-1074951616.jpg)
-    
+
+四、Redux Flow  
+![redux工作流程](http://www.ruanyifeng.com/blogimg/asset/2016/bg2016091802.jpg)
       
     
     
